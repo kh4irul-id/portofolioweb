@@ -184,7 +184,7 @@
                 <div class="lg:w-1/2 mb-12 lg:mb-0 fade-in">
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Muhammad Choerul Chamdani</h1>
                     <h2 class="text-xl md:text-2xl text-blue-100 mb-4">Electrical Engineering Graduate (S1) | Universitas Bengkulu</h2>
-                    <p class="text-lg md:text-xl text-blue-50 mb-8">"Instrumentation & Control | Automation System | Electrical Maintenance | Machine Learning Enthusiast"</p>
+                    <p class="text-lg md:text-xl text-blue-50 mb-8">"Instrumentation & Control | Automation System | Electrical Maintenance | IoT Enthusiast"</p>
                     <div class="flex flex-wrap gap-4">
                         <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-600 font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
                             <i class="fas fa-envelope mr-2"></i>Contact Me
@@ -223,7 +223,8 @@
                 </div>
                 <div class="lg:w-3/5 lg:pl-12 fade-in">
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Saya adalah lulusan Teknik Elektro yang berfokus pada sistem tenaga, instrumentasi, dan pengembangan teknologi berbasis mikrokontroler. Dengan IPK 3.74/4.00, saya telah mengembangkan keahlian dalam pengoperasian SCADA, analisis performa pembangkit, condition monitoring, serta menerapkan machine learning untuk pemodelan beban listrik. Minat saya meliputi SCADA & Automation, Electrical Maintenance, Embedded System, dan Machine Learning for Power System. Pendekatan kerja saya didasarkan pada problem-solving, praktik keselamatan, analisis terstruktur, dan pembelajaran berkelanjutan.
+                        Lulusan Sarjana Teknik Elektro dengan fokus studi pada Instrumentasi, Kendali, dan Sistem Automasi. Saya memiliki latar belakang kuat dalam operasional sistem kelistrikan industri dan pemeliharaan instrumen yang diasah melalui pengalaman magang di sektor pembangkit listrik dan manufaktur.
+                        Keahlian utama saya mencakup pemeliharaan preventif menggunakan Thermal Imager dan Power Quality Analyzer (PQA), serta monitoring sistem berbasis SCADA dan PLC. Selain aspek elektrikal arus kuat, saya memiliki ketertarikan mendalam dan portofolio dalam pengembangan sistem Embedded System dan Internet of Things (IoT). Saya berpengalaman merancang solusi IoT end-to-end, mulai dari desain Custom PCB berbasis ESP32/Arduino, integrasi sensor, hingga visualisasi dashboard monitoring data.
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -252,7 +253,7 @@
                                 <li>• Instrumentation & Control</li>
                                 <li>• Automation Systems</li>
                                 <li>• Electrical Maintenance</li>
-                                <li>• Machine Learning</li>
+                                <li>• Internet of Things</li>
                             </ul>
                         </div>
                     </div>
@@ -564,91 +565,1392 @@
     </section>
     
     <!-- Projects Section -->
-    <section id="projects" class="section-padding bg-white">
-        <div class="container mx-auto px-4 md:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 fade-in">Featured Project</h2>
-            
-            <div class="max-w-5xl mx-auto">
-                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 fade-in transition-all hover:shadow-blue-100/50">
-                    <div class="p-8 md:p-10">
-                        <div class="mb-8">
-                            <span class="text-blue-600 font-bold uppercase tracking-widest text-sm italic">Innovation & Research</span>
-                            <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2 leading-tight">
-                                Smart Energy Meter System (SEMS) & <br class="hidden md:block"> Short-Term Load Forecasting (XGBoost)
-                            </h3>
+    <!-- Projects Section - Smart Energy Meter IoT -->
+    <section id="projects" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">IoT Project</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Smart Energy Meter dengan Monitoring Real-time & Short-Term Load Forecasting menggunakan XGBoost</p>
+            </div>
+
+            <!-- Project Carousel Container -->
+            <div class="max-w-6xl mx-auto">
+                <!-- Carousel Navigation -->
+                <div class="flex justify-between items-center mb-8">
+                    <button id="prev-slide" class="p-3 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors">
+                        <i class="fas fa-chevron-left text-gray-700 text-xl"></i>
+                    </button>
+                    
+                    <div class="text-center">
+                        <span id="current-slide" class="text-2xl font-bold text-blue-600">1</span>
+                        <span class="text-gray-400 mx-2">/</span>
+                        <span id="total-slides" class="text-gray-600">14</span>
+                        <h3 id="slide-title" class="text-lg font-semibold text-gray-800 mt-2">Cover Project</h3>
+                    </div>
+                    
+                    <button id="next-slide" class="p-3 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors">
+                        <i class="fas fa-chevron-right text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Carousel Slides -->
+                <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <div id="slides-container" class="flex transition-transform duration-500">
+                        
+                        <!-- Slide 1 - Cover -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 md:p-12">
+                                <div class="h-full flex flex-col justify-center items-center text-center">
+                                    <div class="mb-8">
+                                        <div class="inline-block px-6 py-2 bg-white/20 rounded-full text-sm mb-4">
+                                            IoT & Machine Learning Project
+                                        </div>
+                                        <h3 class="text-4xl md:text-5xl font-bold mb-4">Smart Energy Meter IoT</h3>
+                                        <h4 class="text-2xl md:text-3xl font-light mb-8">Monitoring & Short-Term Load Forecasting menggunakan XGBoost</h4>
+                                    </div>
+                                    
+                                    <div class="space-y-4 mb-12">
+                                        <div class="flex items-center justify-center">
+                                            <i class="fas fa-user text-xl mr-3"></i>
+                                            <span class="text-xl">Muhammad Choerul Chamdani</span>
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                            <i class="fas fa-graduation-cap text-xl mr-3"></i>
+                                            <span class="text-xl">Teknik Elektro – Universitas Bengkulu</span>
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                            <i class="fas fa-calendar text-xl mr-3"></i>
+                                            <span class="text-xl">2025</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="text-xl max-w-2xl">IoT-based Energy Monitoring & Machine Learning Forecasting System</p>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                            <div class="lg:col-span-5">
-                                <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
-                                    <span class="w-8 h-1 bg-blue-600 rounded mr-3"></span> Project Description:
-                                </h4>
-                                <ul class="text-gray-600 space-y-4">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-sm"></i>
-                                        <span>Designed a Custom PCB using KiCad for SEMS (error < 1%)</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-sm"></i>
-                                        <span>XGBoost Forecasting with 90% accuracy for 7-day load prediction</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-sm"></i>
-                                        <span>Real-time IoT Connectivity for remote data monitoring</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-sm"></i>
-                                        <span>Advanced Dashboard Visualization for energy consumption patterns</span>
-                                    </li>
-                                </ul>
-
-                                <div class="mt-8 flex flex-wrap gap-2">
-                                    <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1.5 rounded-full border border-gray-200 uppercase">Python</span>
-                                    <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1.5 rounded-full border border-gray-200 uppercase">IoT</span>
-                                    <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1.5 rounded-full border border-gray-200 uppercase">KiCad</span>
-                                    <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1.5 rounded-full border border-gray-200 uppercase">XGBoost</span>
-                                </div>
-                            </div>
-                            
-                            <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="group">
-                                    <p class="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest group-hover:text-blue-600 transition-colors">PCB Layout Design</p>
-                                    <div class="relative overflow-hidden rounded-2xl shadow-md border border-gray-200 aspect-video lg:aspect-square xl:aspect-video bg-gray-50">
-                                        <img src="img/pcbdesign.png" alt="PCB Design" class="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-110">
-                                        <div class="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <!-- Slide 2 - Project Overview -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-clipboard-list mr-2"></i> Project Overview
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Overview Proyek</h3>
                                     </div>
-                                </div>
-                                
-                                <div class="group">
-                                    <p class="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Smart Energy Meter</p>
-                                    <div class="relative overflow-hidden rounded-2xl shadow-md border border-gray-200 aspect-video lg:aspect-square xl:aspect-video bg-white text-center">
-                                        <img src="img/energymeter.jpg" alt="Prediction Graph" class="w-full h-full object-contain p-1 transition-transform duration-500 group-hover:scale-105">
-                                        <div class="absolute inset-0 bg-blue-900/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                                    </div>
-                                </div>
-
-                                <div class="group">
-                                    <p class="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Prediction Analysis</p>
-                                    <div class="relative overflow-hidden rounded-2xl shadow-md border border-gray-200 aspect-video lg:aspect-square xl:aspect-video bg-white text-center">
-                                        <img src="img/ModelPelatihanData2 (2).png" alt="Prediction Graph" class="w-full h-full object-contain p-1 transition-transform duration-500 group-hover:scale-105">
-                                        <div class="absolute inset-0 bg-blue-900/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                                    </div>
-                                </div>
-
-                                <div class="group">
-                                    <p class="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Monitoring Dashboard</p>
-                                    <div class="relative overflow-hidden rounded-2xl shadow-md border border-gray-200 aspect-video lg:aspect-square xl:aspect-video bg-white text-center">
-                                        <img src="img/monitoringdashboard.png" alt="Prediction Graph" class="w-full h-full object-contain p-1 transition-transform duration-500 group-hover:scale-105">
-                                        <div class="absolute inset-0 bg-blue-900/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                                    
+                                    <div class="grid md:grid-cols-2 gap-8 flex-grow">
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">Fitur Utama</h4>
+                                            <ul class="space-y-4">
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-microchip text-blue-600"></i>
+                                                    </div>
+                                                    <span>Sistem Smart Energy Meter berbasis IoT</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-chart-line text-blue-600"></i>
+                                                    </div>
+                                                    <span>Monitoring konsumsi listrik real-time</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-brain text-blue-600"></i>
+                                                    </div>
+                                                    <span>Prediksi beban listrik jangka pendek (24 jam)</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-cogs text-blue-600"></i>
+                                                    </div>
+                                                    <span>Algoritma Machine Learning XGBoost</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="bg-blue-50 p-6 rounded-xl">
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">🎯 Tujuan</h4>
+                                            <p class="text-gray-700 mb-4">Meningkatkan efisiensi energi dan membantu pengguna memahami pola konsumsi listrik berbasis data.</p>
+                                            
+                                            <div class="mt-6">
+                                                <h5 class="font-semibold text-gray-800 mb-2">Manfaat:</h5>
+                                                <ul class="space-y-2">
+                                                    <li class="flex items-center">
+                                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                                        <span>Optimasi penggunaan energi</span>
+                                                    </li>
+                                                    <li class="flex items-center">
+                                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                                        <span>Pengurangan biaya listrik</span>
+                                                    </li>
+                                                    <li class="flex items-center">
+                                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                                        <span>Prediksi kebutuhan energi</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Slide 3 - Problem Statement -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-exclamation-triangle mr-2"></i> Problem Statement
+                                        </div>
+                                        <h3 class="text-3xl font-bold mb-6">Permasalahan & Solusi</h3>
+                                    </div>
+                                    
+                                    <div class="grid md:grid-cols-2 gap-8 flex-grow">
+                                        <div>
+                                            <h4 class="text-xl font-semibold mb-6 text-red-300">⚠️ Permasalahan</h4>
+                                            <ul class="space-y-4">
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 text-red-400 mr-3 mt-1">
+                                                        <i class="fas fa-times-circle"></i>
+                                                    </div>
+                                                    <span>Meter listrik konvensional tidak real-time</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 text-red-400 mr-3 mt-1">
+                                                        <i class="fas fa-times-circle"></i>
+                                                    </div>
+                                                    <span>Pengguna tidak tahu pola konsumsi energi</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 text-red-400 mr-3 mt-1">
+                                                        <i class="fas fa-times-circle"></i>
+                                                    </div>
+                                                    <span>Tidak ada prediksi beban listrik</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 text-red-400 mr-3 mt-1">
+                                                        <i class="fas fa-times-circle"></i>
+                                                    </div>
+                                                    <span>Sulit melakukan penghematan energi</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="bg-gray-700/50 p-6 rounded-xl">
+                                            <h4 class="text-xl font-semibold mb-6 text-green-300">💡 Solusi</h4>
+                                            <p class="mb-6">Sistem IoT + Machine Learning untuk monitoring & forecasting energi listrik.</p>
+                                            
+                                            <div class="flex items-center justify-center h-40">
+                                                <div class="text-center">
+                                                    <div class="text-5xl mb-4">
+                                                        <i class="fas fa-microchip text-blue-400"></i>
+                                                        <i class="fas fa-plus mx-4 text-gray-400"></i>
+                                                        <i class="fas fa-brain text-green-400"></i>
+                                                    </div>
+                                                    <p class="text-lg">IoT + Machine Learning</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 - System Architecture -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-sitemap mr-2"></i> System Architecture
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Arsitektur Sistem IoT</h3>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 flex-grow">
+                                        <!-- Edge Devices -->
+                                        <div class="bg-gradient-to-b from-blue-50 to-white p-6 rounded-xl border border-blue-100">
+                                            <div class="text-center mb-6">
+                                                <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                                                    <i class="fas fa-microchip text-blue-600 text-2xl"></i>
+                                                </div>
+                                                <h4 class="text-xl font-semibold text-gray-800">1️⃣ Perangkat (Edge)</h4>
+                                            </div>
+                                            <ul class="space-y-3">
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-brain text-blue-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">ESP32</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-bolt text-blue-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">Sensor PZEM-004T</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-tv text-blue-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">LCD TFT</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-thermometer-half text-blue-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">DHT22 (opsional)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- Network & Cloud -->
+                                        <div class="bg-gradient-to-b from-green-50 to-white p-6 rounded-xl border border-green-100">
+                                            <div class="text-center mb-6">
+                                                <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                                                    <i class="fas fa-cloud text-green-600 text-2xl"></i>
+                                                </div>
+                                                <h4 class="text-xl font-semibold text-gray-800">2️⃣ Network & Cloud</h4>
+                                            </div>
+                                            <ul class="space-y-3">
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-wifi text-green-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">Wi-Fi</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-database text-green-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">Database & Server</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- Data Analytics -->
+                                        <div class="bg-gradient-to-b from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                                            <div class="text-center mb-6">
+                                                <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                                                    <i class="fas fa-chart-bar text-purple-600 text-2xl"></i>
+                                                </div>
+                                                <h4 class="text-xl font-semibold text-gray-800">3️⃣ Data Analytics</h4>
+                                            </div>
+                                            <ul class="space-y-3">
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-filter text-purple-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">Preprocessing</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-cogs text-purple-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">Model XGBoost</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-chart-line text-purple-600"></i>
+                                                    </div>
+                                                    <span class="font-medium">Prediksi beban listrik</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Architecture Diagram Placeholder -->
+                                    <div class="mt-8 bg-gray-100 rounded-xl p-4 text-center">
+                                        <div class="flex items-center justify-center h-32">
+                                            <i class="fas fa-project-diagram text-4xl text-gray-400 mr-4"></i>
+                                            <span class="text-gray-600">Diagram Arsitektur Sistem IoT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5 - Hardware Implementation -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-gray-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-microchip mr-2"></i> Hardware Implementation
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Perangkat Keras</h3>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                                        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                                            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-brain text-blue-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="font-semibold text-gray-800 mb-2">ESP32</h4>
+                                            <p class="text-sm text-gray-600">Mikrokontroler utama</p>
+                                        </div>
+                                        
+                                        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                                            <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-bolt text-green-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="font-semibold text-gray-800 mb-2">PZEM-004T</h4>
+                                            <p class="text-sm text-gray-600">Sensor tegangan, arus, daya, energi</p>
+                                        </div>
+                                        
+                                        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                                            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-thermometer-half text-red-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="font-semibold text-gray-800 mb-2">DHT22</h4>
+                                            <p class="text-sm text-gray-600">Sensor suhu & kelembaban</p>
+                                        </div>
+                                        
+                                        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                                            <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-tv text-purple-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="font-semibold text-gray-800 mb-2">LCD TFT</h4>
+                                            <p class="text-sm text-gray-600">Tampilan lokal</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Workflow -->
+                                    <div class="bg-blue-50 p-6 rounded-xl flex-grow">
+                                        <h4 class="text-xl font-semibold text-gray-800 mb-4">📍 Alur Data</h4>
+                                        <div class="flex flex-col md:flex-row items-center justify-between">
+                                            <div class="text-center mb-4 md:mb-0">
+                                                <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center mx-auto mb-2">
+                                                    <i class="fas fa-rss text-blue-600"></i>
+                                                </div>
+                                                <p class="text-sm font-medium">Data diukur</p>
+                                            </div>
+                                            
+                                            <div class="hidden md:block">
+                                                <i class="fas fa-arrow-right text-gray-400 text-xl"></i>
+                                            </div>
+                                            <div class="md:hidden">
+                                                <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                                            </div>
+                                            
+                                            <div class="text-center mb-4 md:mb-0">
+                                                <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center mx-auto mb-2">
+                                                    <i class="fas fa-cogs text-blue-600"></i>
+                                                </div>
+                                                <p class="text-sm font-medium">Diproses</p>
+                                            </div>
+                                            
+                                            <div class="hidden md:block">
+                                                <i class="fas fa-arrow-right text-gray-400 text-xl"></i>
+                                            </div>
+                                            <div class="md:hidden">
+                                                <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                                            </div>
+                                            
+                                            <div class="text-center mb-4 md:mb-0">
+                                                <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center mx-auto mb-2">
+                                                    <i class="fas fa-cloud-upload-alt text-blue-600"></i>
+                                                </div>
+                                                <p class="text-sm font-medium">Dikirim ke cloud</p>
+                                            </div>
+                                            
+                                            <div class="hidden md:block">
+                                                <i class="fas fa-arrow-right text-gray-400 text-xl"></i>
+                                            </div>
+                                            <div class="md:hidden">
+                                                <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                                            </div>
+                                            
+                                            <div class="text-center">
+                                                <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center mx-auto mb-2">
+                                                    <i class="fas fa-eye text-blue-600"></i>
+                                                </div>
+                                                <p class="text-sm font-medium">Ditampilkan</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Hardware Photo Placeholder -->
+                                    <div class="mt-6 bg-gray-100 rounded-xl p-4 text-center">
+                                        <div class="flex items-center justify-center h-24">
+                                            <i class="fas fa-camera text-3xl text-gray-400 mr-4"></i>
+                                            <span class="text-gray-600">Foto Perangkat Hardware</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 6 - Software & Tools -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-code mr-2"></i> Software & Tools
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Teknologi yang Digunakan</h3>
+                                    </div>
+                                    
+                                    <div class="grid md:grid-cols-3 gap-8 flex-grow">
+                                        <!-- IoT & Embedded -->
+                                        <div class="bg-gradient-to-b from-blue-50 to-white p-6 rounded-xl border border-blue-100">
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+                                                <i class="fas fa-microchip text-blue-600 mr-3"></i>
+                                                IoT & Embedded
+                                            </h4>
+                                            <ul class="space-y-3">
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-desktop text-blue-600"></i>
+                                                    </div>
+                                                    <span>Arduino IDE</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-wifi text-blue-600"></i>
+                                                    </div>
+                                                    <span>ESP32 Framework</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- Data & Machine Learning -->
+                                        <div class="bg-gradient-to-b from-green-50 to-white p-6 rounded-xl border border-green-100">
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+                                                <i class="fas fa-database text-green-600 mr-3"></i>
+                                                Data & Machine Learning
+                                            </h4>
+                                            <ul class="space-y-3">
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                                        <i class="fab fa-python text-green-600"></i>
+                                                    </div>
+                                                    <span>Python</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-brain text-green-600"></i>
+                                                    </div>
+                                                    <span>XGBoost</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-cogs text-green-600"></i>
+                                                    </div>
+                                                    <span>Scikit-learn</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-chart-bar text-green-600"></i>
+                                                    </div>
+                                                    <span>Pandas, NumPy</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- Visualization -->
+                                        <div class="bg-gradient-to-b from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+                                                <i class="fas fa-chart-line text-purple-600 mr-3"></i>
+                                                Visualization
+                                            </h4>
+                                            <ul class="space-y-3">
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-globe text-purple-600"></i>
+                                                    </div>
+                                                    <span>Web Dashboard</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-chart-area text-purple-600"></i>
+                                                    </div>
+                                                    <span>Grafik Real-time</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Tech Stack Logos -->
+                                    <div class="mt-8">
+                                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Tech Stack Logos</h4>
+                                        <div class="flex flex-wrap gap-4 justify-center">
+                                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                                <i class="fab fa-python text-2xl text-blue-500"></i>
+                                            </div>
+                                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                                <i class="fas fa-bolt text-2xl text-yellow-500"></i>
+                                            </div>
+                                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                                <i class="fab fa-js text-2xl text-yellow-400"></i>
+                                            </div>
+                                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                                <i class="fab fa-html5 text-2xl text-orange-500"></i>
+                                            </div>
+                                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                                <i class="fab fa-css3-alt text-2xl text-blue-500"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 7 - Machine Learning Approach -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-purple-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-robot mr-2"></i> Machine Learning Approach
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Load Forecasting dengan XGBoost</h3>
+                                    </div>
+                                    
+                                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">📊 Jenis Prediksi:</h4>
+                                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                                <div class="flex items-center">
+                                                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                                        <i class="fas fa-clock text-blue-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Short-Term Load Forecasting</h5>
+                                                        <p class="text-gray-600">Prediksi harian (24 jam ke depan)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">⚙️ Proses:</h4>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <span class="font-semibold text-purple-600">1</span>
+                                                    </div>
+                                                    <span>Akuisisi data energi</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <span class="font-semibold text-purple-600">2</span>
+                                                    </div>
+                                                    <span>Preprocessing data</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <span class="font-semibold text-purple-600">3</span>
+                                                    </div>
+                                                    <span>Hyperparameter tuning (Grid Search)</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <span class="font-semibold text-purple-600">4</span>
+                                                    </div>
+                                                    <span>Training model XGBoost</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <span class="font-semibold text-purple-600">5</span>
+                                                    </div>
+                                                    <span>Evaluasi akurasi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-white p-6 rounded-xl shadow-md mt-4">
+                                        <div class="flex items-center">
+                                            <div class="mr-4">
+                                                <i class="fas fa-tachometer-alt text-3xl text-green-500"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-semibold text-gray-800 mb-1">📈 Model sangat efisien & cepat</h4>
+                                                <p class="text-gray-600">XGBoost dipilih karena performa tinggi dalam regression tasks dan kemampuan handling missing values</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 8 - Dataset & Testing -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-blue-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-database mr-2"></i> Dataset & Testing
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Dataset Pengujian</h3>
+                                    </div>
+                                    
+                                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                                        <div class="bg-white p-6 rounded-xl shadow-md">
+                                            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-building text-blue-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="text-lg font-semibold text-gray-800 mb-2 text-center">Panel AC Gedung Teknik Elektro</h4>
+                                        </div>
+                                        
+                                        <div class="bg-white p-6 rounded-xl shadow-md">
+                                            <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-hospital text-green-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="text-lg font-semibold text-gray-800 mb-2 text-center">Ruang CT Scan Rumah Sakit</h4>
+                                        </div>
+                                        
+                                        <div class="bg-white p-6 rounded-xl shadow-md">
+                                            <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-city text-purple-600 text-2xl"></i>
+                                            </div>
+                                            <h4 class="text-lg font-semibold text-gray-800 mb-2 text-center">Gedung Perkantoran</h4>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Dataset Duration -->
+                                    <div class="mb-8">
+                                        <h4 class="text-xl font-semibold text-gray-800 mb-4">⏱️ Durasi data:</h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-5 rounded-xl text-center">
+                                                <div class="text-3xl font-bold mb-1">18 hari</div>
+                                                <div class="text-sm opacity-90">Data singkat untuk validasi awal</div>
+                                            </div>
+                                            
+                                            <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-5 rounded-xl text-center">
+                                                <div class="text-3xl font-bold mb-1">8 bulan</div>
+                                                <div class="text-sm opacity-90">Data menengah untuk tuning model</div>
+                                            </div>
+                                            
+                                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-5 rounded-xl text-center">
+                                                <div class="text-3xl font-bold mb-1">1 tahun</div>
+                                                <div class="text-sm opacity-90">Data lengkap untuk evaluasi akhir</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Dataset Source -->
+                                    <div class="bg-gray-50 p-6 rounded-xl">
+                                        <h4 class="text-lg font-semibold text-gray-800 mb-2">📊 Sumber Dataset:</h4>
+                                        <p class="text-gray-700">Dataset dikumpulkan dari berbagai lokasi dengan karakteristik beban yang berbeda untuk menguji robustness model</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 9 - Model Performance -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-green-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-green-100 text-green-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-chart-line mr-2"></i> Model Performance
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Hasil Akurasi Model</h3>
+                                    </div>
+                                    
+                                    <!-- Performance Results -->
+                                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                                        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                                            <div class="text-4xl font-bold text-green-600 mb-2">93,97%</div>
+                                            <div class="text-sm text-gray-500 mb-3">Akurasi</div>
+                                            <div class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                                                18 Hari
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                                            <div class="text-4xl font-bold text-green-600 mb-2">95,46%</div>
+                                            <div class="text-sm text-gray-500 mb-3">Akurasi</div>
+                                            <div class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                                                8 Bulan
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                                            <div class="text-4xl font-bold text-green-600 mb-2">99,87%</div>
+                                            <div class="text-sm text-gray-500 mb-3">Akurasi</div>
+                                            <div class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                                                1 Tahun
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- R² Score -->
+                                    <div class="mb-8">
+                                        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-xl">
+                                            <div class="flex items-center justify-between">
+                                                <div>
+                                                    <h4 class="text-xl font-semibold mb-2">R² Score (1 Tahun Data)</h4>
+                                                    <p class="text-green-100">Mendekati nilai sempurna (1.0)</p>
+                                                </div>
+                                                <div class="text-4xl font-bold">0,9974</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Conclusion -->
+                                    <div class="mt-auto">
+                                        <div class="flex items-center bg-yellow-50 p-5 rounded-xl border border-yellow-200">
+                                            <div class="mr-4">
+                                                <i class="fas fa-trophy text-3xl text-yellow-500"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-semibold text-gray-800 mb-1">🏆 Semakin panjang data → semakin akurat model</h4>
+                                                <p class="text-gray-700">Model menunjukkan konsistensi performa dengan akurasi meningkat seiring bertambahnya data training</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 10 - System Output -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-indigo-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-desktop mr-2"></i> System Output
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Output Sistem</h3>
+                                    </div>
+                                    
+                                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">📡 Output yang Dihasilkan:</h4>
+                                            <ul class="space-y-4">
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-chart-line text-blue-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Grafik konsumsi listrik real-time</h5>
+                                                        <p class="text-gray-600 text-sm">Monitoring penggunaan energi per menit/jam</p>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-chart-bar text-green-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Visualisasi pola harian/mingguan</h5>
+                                                        <p class="text-gray-600 text-sm">Analisis pola konsumsi untuk identifikasi peak hours</p>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-crystal-ball text-purple-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Prediksi beban 24 jam ke depan</h5>
+                                                        <p class="text-gray-600 text-sm">Forecasting untuk perencanaan konsumsi energi</p>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-tv text-orange-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Tampilan LCD & Website</h5>
+                                                        <p class="text-gray-600 text-sm">Antarmuka pengguna multi-platform</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="bg-indigo-50 p-6 rounded-xl">
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">💡 Value Proposition</h4>
+                                            <p class="text-gray-700 mb-4">Sistem ini mendukung pengambilan keputusan berbasis data untuk:</p>
+                                            <ul class="space-y-2">
+                                                <li class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                                    <span>Manajemen energi yang lebih efisien</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                                    <span>Pengurangan biaya operasional</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                                    <span>Perencanaan kapasitas yang lebih baik</span>
+                                                </li>
+                                                <li class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                                    <span>Deteksi anomali konsumsi energi</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Dashboard Preview -->
+                                    <div class="bg-gray-100 rounded-xl p-4 text-center">
+                                        <div class="flex items-center justify-center h-24">
+                                            <i class="fas fa-tachometer-alt text-3xl text-gray-400 mr-4"></i>
+                                            <span class="text-gray-600">Preview Dashboard Monitoring Real-time</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 11 - Impact & Benefits -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-teal-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-teal-100 text-teal-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-leaf mr-2"></i> Impact & Benefits
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Dampak & Manfaat</h3>
+                                    </div>
+                                    
+                                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">🌱 Manfaat Langsung:</h4>
+                                            <div class="space-y-4">
+                                                <div class="flex items-start bg-white p-4 rounded-xl shadow-sm">
+                                                    <div class="flex-shrink-0 mr-4">
+                                                        <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                                                            <i class="fas fa-eye text-teal-600"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Monitoring energi real-time</h5>
+                                                        <p class="text-gray-600 text-sm">Transparansi konsumsi energi</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="flex items-start bg-white p-4 rounded-xl shadow-sm">
+                                                    <div class="flex-shrink-0 mr-4">
+                                                        <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                                                            <i class="fas fa-crystal-ball text-teal-600"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Prediksi konsumsi listrik</h5>
+                                                        <p class="text-gray-600 text-sm">Perencanaan yang lebih baik</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="flex items-start bg-white p-4 rounded-xl shadow-sm">
+                                                    <div class="flex-shrink-0 mr-4">
+                                                        <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                                                            <i class="fas fa-bolt text-teal-600"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Efisiensi energi</h5>
+                                                        <p class="text-gray-600 text-sm">Pengurangan waste energy</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">🚀 Potensi Pengembangan:</h4>
+                                            <div class="space-y-4">
+                                                <div class="flex items-start bg-white p-4 rounded-xl shadow-sm">
+                                                    <div class="flex-shrink-0 mr-4">
+                                                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                                                            <i class="fas fa-home text-blue-600"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Mendukung Smart Home & Smart Building</h5>
+                                                        <p class="text-gray-600 text-sm">Integrasi dengan sistem otomasi</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="flex items-start bg-white p-4 rounded-xl shadow-sm">
+                                                    <div class="flex-shrink-0 mr-4">
+                                                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                                                            <i class="fas fa-industry text-blue-600"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="font-semibold text-gray-800">Siap dikembangkan ke industri & smart grid</h5>
+                                                        <p class="text-gray-600 text-sm">Scalable untuk berbagai skala aplikasi</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Impact Summary -->
+                                    <div class="mt-auto">
+                                        <div class="bg-gradient-to-r from-teal-500 to-teal-600 text-white p-6 rounded-xl">
+                                            <div class="flex items-center">
+                                                <div class="mr-4">
+                                                    <i class="fas fa-chart-line text-3xl"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-xl font-semibold mb-1">Impact Measurement</h4>
+                                                    <p>Potensi penghematan energi hingga 15-25% melalui optimasi berbasis data</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 12 - My Role -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-orange-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-user-tie mr-2"></i> My Role
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Peran Saya dalam Proyek</h3>
+                                    </div>
+                                    
+                                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4">👨‍💻 Tanggung Jawab Utama:</h4>
+                                            <div class="space-y-4">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-pencil-ruler text-orange-600"></i>
+                                                    </div>
+                                                    <span>Perancangan sistem IoT</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-project-diagram text-orange-600"></i>
+                                                    </div>
+                                                    <span>Wiring & PCB design</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-code text-orange-600"></i>
+                                                    </div>
+                                                    <span>Pemrograman ESP32</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-database text-orange-600"></i>
+                                                    </div>
+                                                    <span>Data processing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-gray-800 mb-4 mt-8 md:mt-0">🔬 Aktivitas Khusus:</h4>
+                                            <div class="space-y-4">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-cogs text-orange-600"></i>
+                                                    </div>
+                                                    <span>Training & evaluasi model XGBoost</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-chart-bar text-orange-600"></i>
+                                                    </div>
+                                                    <span>Analisis hasil prediksi</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-vial text-orange-600"></i>
+                                                    </div>
+                                                    <span>Testing & validation sistem</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                                        <i class="fas fa-file-alt text-orange-600"></i>
+                                                    </div>
+                                                    <span>Dokumentasi proyek</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Skills Applied -->
+                                    <div class="mt-auto">
+                                        <div class="bg-white p-6 rounded-xl shadow-md">
+                                            <h4 class="text-lg font-semibold text-gray-800 mb-3">🛠️ Skills yang Diaplikasikan:</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">IoT Development</span>
+                                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">PCB Design</span>
+                                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Data Analysis</span>
+                                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Python Programming</span>
+                                                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">Embedded Systems</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 13 - Documentation -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-gray-50 to-white p-8 md:p-12">
+                                <div class="h-full flex flex-col">
+                                    <div class="mb-8">
+                                        <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
+                                            <i class="fas fa-images mr-2"></i> Project Documentation
+                                        </div>
+                                        <h3 class="text-3xl font-bold text-gray-800 mb-6">Dokumentasi Proyek</h3>
+                                        <p class="text-gray-600 mb-6">Visualisasi lengkap dari proses desain, implementasi, hingga hasil analisis sistem Smart Energy Meter IoT</p>
+                                    </div>
+                                    
+                                    <!-- Image Grid -->
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 flex-grow">
+                                        <!-- PCB Design -->
+                                        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                                            <div class="p-4 bg-gradient-to-r from-blue-50 to-blue-100">
+                                                <h4 class="text-lg font-semibold text-gray-800 flex items-center">
+                                                    <i class="fas fa-project-diagram text-blue-600 mr-2"></i>
+                                                    Desain PCB
+                                                </h4>
+                                                <p class="text-sm text-gray-600 mt-1">Custom PCB untuk Smart Energy Meter System</p>
+                                            </div>
+                                            <div class="p-4">
+                                                <div class="relative h-48 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                                                    <!-- gambar13.png - PCB Design -->
+                                                    <img src="img/pcbdesign.png" alt="PCB Design" class="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-300">
+                                                    <div class="absolute inset-0 flex items-center justify-center bg-blue-500/10 hover:bg-transparent transition-colors duration-300">
+                                                        <button class="image-zoom-btn absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center text-blue-600 shadow-md hover:bg-white hover:shadow-lg transition-all" data-image="img/gambar13.png" data-title="Desain PCB Smart Energy Meter">
+                                                            <i class="fas fa-search-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-3">
+                                                    <div class="flex flex-wrap gap-1">
+                                                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">KiCad</span>
+                                                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">ESP32</span>
+                                                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PZEM-004T</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Hardware Photo -->
+                                        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                                            <div class="p-4 bg-gradient-to-r from-green-50 to-green-100">
+                                                <h4 class="text-lg font-semibold text-gray-800 flex items-center">
+                                                    <i class="fas fa-microchip text-green-600 mr-2"></i>
+                                                    Foto Alat
+                                                </h4>
+                                                <p class="text-sm text-gray-600 mt-1">Implementasi hardware sistem IoT</p>
+                                            </div>
+                                            <div class="p-4">
+                                                <div class="relative h-48 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                                                    <!-- gambar19.png - Hardware Photo -->
+                                                    <img src="img/energymeter.jpg" alt="Hardware Implementation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                                    <button class="image-zoom-btn absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center text-green-600 shadow-md hover:bg-white hover:shadow-lg transition-all" data-image="img/gambar19.png" data-title="Implementasi Hardware IoT">
+                                                        <i class="fas fa-search-plus"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="mt-3">
+                                                    <div class="flex flex-wrap gap-1">
+                                                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">ESP32</span>
+                                                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PZEM-004T</span>
+                                                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">LCD TFT</span>
+                                                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">DHT22</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- System Architecture -->
+                                        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                                            <div class="p-4 bg-gradient-to-r from-purple-50 to-purple-100">
+                                                <h4 class="text-lg font-semibold text-gray-800 flex items-center">
+                                                    <i class="fas fa-sitemap text-purple-600 mr-2"></i>
+                                                    Diagram Arsitektur
+                                                </h4>
+                                                <p class="text-sm text-gray-600 mt-1">Arsitektur sistem IoT end-to-end</p>
+                                            </div>
+                                            <div class="p-4">
+                                                <div class="relative h-48 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                                                    <!-- gambar20.png - System Architecture -->
+                                                    <img src="img/monitoringdashboard.png" alt="System Architecture" class="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-300">
+                                                    <button class="image-zoom-btn absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center text-purple-600 shadow-md hover:bg-white hover:shadow-lg transition-all" data-image="img/gambar20.png" data-title="Diagram Arsitektur Sistem IoT">
+                                                        <i class="fas fa-search-plus"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="mt-3">
+                                                    <div class="flex flex-wrap gap-1">
+                                                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">IoT Architecture</span>
+                                                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Data Flow</span>
+                                                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Cloud Integration</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Prediction Results -->
+                                        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                                            <div class="p-4 bg-gradient-to-r from-red-50 to-red-100">
+                                                <h4 class="text-lg font-semibold text-gray-800 flex items-center">
+                                                    <i class="fas fa-chart-line text-red-600 mr-2"></i>
+                                                    Grafik Hasil Prediksi
+                                                </h4>
+                                                <p class="text-sm text-gray-600 mt-1">Akurasi model XGBoost untuk load forecasting</p>
+                                            </div>
+                                            <div class="p-4">
+                                                <div class="relative h-48 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                                                    <!-- gambar21.png - Prediction Graph -->
+                                                    <img src="img/predictionResult.png" alt="Prediction Results" class="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-300">
+                                                    <button class="image-zoom-btn absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center text-red-600 shadow-md hover:bg-white hover:shadow-lg transition-all" data-image="img/gambar21.png" data-title="Grafik Hasil Prediksi XGBoost">
+                                                        <i class="fas fa-search-plus"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="mt-3">
+                                                    <div class="flex flex-wrap gap-1">
+                                                        <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">XGBoost</span>
+                                                        <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">99.87% Accuracy</span>
+                                                        <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">Load Forecasting</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Documentation Summary -->
+                                    <div class="mt-auto">
+                                        <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-5 rounded-xl border border-blue-200">
+                                            <div class="flex items-center">
+                                                <div class="mr-4">
+                                                    <i class="fas fa-camera text-3xl text-blue-600"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-lg font-semibold text-gray-800 mb-1">📸 Dokumentasi Visual Lengkap</h4>
+                                                    <p class="text-gray-700">Setiap tahap proyek didokumentasikan dengan baik untuk memastikan transparansi dan kemudahan replikasi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 14 - Closing -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="h-[600px] bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 md:p-12">
+                                <div class="h-full flex flex-col justify-center items-center text-center">
+                                    <div class="mb-12">
+                                        <div class="inline-block px-6 py-2 bg-white/20 rounded-full text-sm mb-8">
+                                            Conclusion
+                                        </div>
+                                        <h3 class="text-4xl md:text-5xl font-bold mb-8">Smart Energy Meter berbasis IoT + XGBoost</h3>
+                                        
+                                        <div class="grid md:grid-cols-3 gap-8 mb-12">
+                                            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                                                <div class="text-4xl mb-4">✔️</div>
+                                                <h4 class="text-xl font-semibold mb-2">Akurat</h4>
+                                                <p class="text-blue-100">Akurasi prediksi hingga 99.87%</p>
+                                            </div>
+                                            
+                                            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                                                <div class="text-4xl mb-4">⚡</div>
+                                                <h4 class="text-xl font-semibold mb-2">Efisien</h4>
+                                                <p class="text-blue-100">Optimasi penggunaan energi</p>
+                                            </div>
+                                            
+                                            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                                                <div class="text-4xl mb-4">🌍</div>
+                                                <h4 class="text-xl font-semibold mb-2">Siap Digunakan</h4>
+                                                <p class="text-blue-100">Implementasi di dunia nyata</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="text-2xl font-light mb-12">
+                                            <p>IoT meets Machine Learning for</p>
+                                            <p class="font-bold">Smart Energy Management</p>
+                                        </div>
+                                        
+                                        <!-- Call to Action -->
+                                        <div class="space-x-4">
+                                            <button id="view-project-details" class="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors">
+                                                <i class="fas fa-info-circle mr-2"></i> Detail Proyek
+                                            </button>
+                                            <button id="contact-about-project" class="bg-transparent border border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors">
+                                                <i class="fas fa-envelope mr-2"></i> Konsultasi Proyek
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Footer Note -->
+                                    <div class="mt-12 pt-8 border-t border-white/20">
+                                        <p class="text-blue-200">Muhammad Choerul Chamdani | Teknik Elektro Universitas Bengkulu | 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
+                </div>
+
+                <!-- Slide Indicators -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="0"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="1"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="2"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="3"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="4"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="5"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="6"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="7"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="8"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="9"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="10"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="11"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="12"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 active:bg-blue-600" data-slide="13"></button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slidesContainer = document.getElementById('slides-container');
+            const slides = document.querySelectorAll('#slides-container > div');
+            const prevButton = document.getElementById('prev-slide');
+            const nextButton = document.getElementById('next-slide');
+            const slideIndicators = document.querySelectorAll('.slide-indicator');
+            const currentSlideElement = document.getElementById('current-slide');
+            const totalSlidesElement = document.getElementById('total-slides');
+            const slideTitleElement = document.getElementById('slide-title');
+            
+            const slideTitles = [
+                "Cover Project",
+                "Project Overview",
+                "Problem Statement",
+                "System Architecture",
+                "Hardware Implementation",
+                "Software & Tools",
+                "Machine Learning Approach",
+                "Dataset & Testing",
+                "Model Performance",
+                "System Output",
+                "Impact & Benefits",
+                "My Role",
+                "Project Documentation",
+                "Closing"
+            ];
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Set total slides
+            totalSlidesElement.textContent = totalSlides;
+            
+            // Update slide title
+            function updateSlideTitle() {
+                slideTitleElement.textContent = slideTitles[currentSlide];
+            }
+            
+            // Update carousel position
+            function updateCarousel() {
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                currentSlideElement.textContent = currentSlide + 1;
+                updateSlideTitle();
+                
+                // Update indicators
+                slideIndicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('bg-blue-600');
+                        indicator.classList.remove('bg-gray-300');
+                    } else {
+                        indicator.classList.remove('bg-blue-600');
+                        indicator.classList.add('bg-gray-300');
+                    }
+                });
+            }
+            
+            // Next slide
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Previous slide
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            
+            // Slide indicators
+            slideIndicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateCarousel();
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                } else if (e.key === 'ArrowRight') {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateCarousel();
+                }
+            });
+            
+            // Auto-advance slides (optional)
+            let autoSlideInterval;
+            
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(() => {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateCarousel();
+                }, 8000); // Change slide every 8 seconds
+            }
+            
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+            
+            // Start auto-slide on mouse leave, stop on hover
+            const carouselContainer = document.querySelector('#slides-container').parentElement;
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+            
+            // Initialize
+            updateCarousel();
+            startAutoSlide();
+            
+            // CTA Buttons
+            document.getElementById('view-project-details').addEventListener('click', function() {
+                alert('Detail lengkap proyek akan ditampilkan. Fitur ini dapat dihubungkan dengan modal atau halaman terpisah.');
+            });
+            
+            document.getElementById('contact-about-project').addEventListener('click', function() {
+                window.location.href = '#contact';
+            });
+        });
+    </script>
+
+    <style>
+        .slide-indicator {
+            transition: all 0.3s ease;
+        }
+        
+        .slide-indicator.active {
+            background-color: #2563EB;
+        }
+        
+        #slides-container {
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
     
     <!-- Certifications Section -->
     <section id="certifications" class="section-padding bg-gray-50">
